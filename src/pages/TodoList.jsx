@@ -1,46 +1,14 @@
 import React from "react";
+import '../App.css'
 
 function TodoList() {
   return (
-    <div className="" style={{ paddingTop: 70, paddingLeft: 300,paddingBottom:70}}>
-      <h1>0</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>1</h1>
-      <h1>2</h1>
-    </div>
+    <div
+      className=""
+      style={{ paddingTop: 70, paddingLeft: 300, paddingBottom: 70 }}>
+
+        <div className="triangle-right"></div>
+      </div>
   );
 }
 
