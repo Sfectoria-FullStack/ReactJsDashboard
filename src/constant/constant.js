@@ -10,3 +10,9 @@ export const sidebarItems = [
         path: "/orders"
     }
 ]
+
+export const orders = [
+    { orderId: 1, clientName: "John Doe" },
+    { orderId: 2, clientName: "Alice Smith" },
+    { orderId: 3, clientName: "Bob Johnson" }
+];
