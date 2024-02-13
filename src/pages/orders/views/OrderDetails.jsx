@@ -7,7 +7,7 @@ function OrderDetails() {
   const [state, setState] = useState({});
   const { orderId } = useParams();
   useEffect(() => {
-    setState(orders.find((elem, i) => elem.orderId === +orderId));
+    setState(orders.find((elem, i) => elem.orderId === +orderId)); // converting the orderId to number
   }, []);
 
   return <div>
