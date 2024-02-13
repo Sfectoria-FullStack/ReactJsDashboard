@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import { sidebarItems } from "../constant/constant";
 import { Link } from "react-router-dom";
 
-
 function Sidebar({ toggle, setToggle }) {
- 
   return (
     <div
       className="position-fixed bg-danger text-white d-flex justify-content-between flex-column"
@@ -17,15 +15,12 @@ function Sidebar({ toggle, setToggle }) {
             X
           </button>
         </div>
-{sidebarItems.map((item,i)=>
-  //  (<div key={i} onClick={()=>{ navigate(item.path)}}>{item.name}</div>)
-  (
-    <Link to={item.path} className="nav-link">{item.name}</Link>
-  
-  )
-)}
-
-        
+        {sidebarItems.map((item, i) => (
+          //  (<div key={i} onClick={()=>{ navigate(item.path)}}>{item.name}</div>)
+          <Link to={item.path} className="nav-link">
+            {item.name}
+          </Link>
+        ))}
       </div>
 
       <div>
