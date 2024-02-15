@@ -3,7 +3,7 @@ import Footer from "./layout/Footer";
 import Navbar from "./layout/Navbar";
 import Sidebar from "./layout/Sidebar";
 import { Outlet } from "react-router-dom";
-
+import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -12,7 +12,9 @@ function App() {
     <div>
       {toggle !== true && <Sidebar setToggle={setToggle} />}
       <Navbar setToggle={setToggle} toggle={toggle} />
-      <Outlet />
+      <div  style={{ paddingTop: 70, paddingLeft: toggle?0:300 }}>
+        <Outlet toggle={toggle} />
+      </div>
       <Footer toggle={toggle} />
     </div>
   );

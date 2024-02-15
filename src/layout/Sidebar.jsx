@@ -17,7 +17,7 @@ function Sidebar({ toggle, setToggle }) {
         </div>
         {sidebarItems.map((item, i) => (
           //  (<div key={i} onClick={()=>{ navigate(item.path)}}>{item.name}</div>)
-          <Link to={item.path} className="nav-link">
+          <Link to={item.path} className="nav-link" key={i}>
             {item.name}
           </Link>
         ))}
