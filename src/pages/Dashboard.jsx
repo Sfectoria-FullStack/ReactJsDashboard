@@ -2,30 +2,31 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-
-function Dashboard({toggle}) {
+import { useSelector, useDispatch } from "react-redux";
+import { getProducts } from "../store/product";
+function Dashboard({ toggle }) {
+  const productStore = useSelector((state) => state.product);
+  const dispatch = useDispatch();
   const [data, setData] = useState([]);
 
-console.log(toggle,"this is toggle");
+  console.log(productStore, "product store from dashbord");
 
-  useEffect(()=>{
- (   async () => {
-    try {
-      const res = await axios.get("http://localhost:3000/data.json")
-      console.log(res.data)
-      setData(res.data)
-    } catch (error) {
-      console.log(error);
-    }
-  })() // IIFE ( imediately invoked function )
+  useEffect(() => {
+    dispatch(getProducts()); // IIFE ( imediately invoked function )
   }, []);
   return (
-    <div >
+    <div>
       <div className="d-flex flex-wrap gap-3 justify-content-center pt-2 pb-3">
-        {data.map((element, index) => {
+        {productStore.products.map((element, index) => {
           return (
             <Card style={{ width: "18rem" }} key={index}>
-              <Card.Img height={200} width={100} style={{objectFit:'contain'}} variant="top" src={element.imageURL} />
+              <Card.Img
+                height={200}
+                width={100}
+                style={{ objectFit: "contain" }}
+                variant="top"
+                src={element.imageURL}
+              />
               <Card.Body className="d-flex justify-content-between flex-column">
                 <div>
                   <Card.Title>{element.productName}</Card.Title>
