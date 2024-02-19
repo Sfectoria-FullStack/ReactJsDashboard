@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Sidebar({ toggle, setToggle }) {
   return (
     <div
-      className="position-fixed bg-danger text-white d-flex justify-content-between flex-column"
+      className="position-fixed bg-danger p-3 text-white d-flex justify-content-between flex-column"
       style={{ width: 300, height: "100%", zIndex: 3 }}
     >
       <div>

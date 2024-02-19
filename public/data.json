@@ -11,14 +11,14 @@
       "id": 2,
       "productName": "Laptop",
       "imageURL": "https://www.hp.com/ca-en/shop/Html/Merch/Images/c08464743_1750x1285.jpg",
-      "price": 899.99,
+      "price": 899.99,  
       "shortDescription": "Thin and lightweight laptop for work and entertainment.",
       "longDescription": "Experience unmatched performance and portability with this sleek laptop. Its powerful processor and high-resolution display make it ideal for multitasking and enjoying multimedia content."
     },
     {
       "id": 3,
       "productName": "Headphones",
-      "imageURL": "https://example.com/headphones.jpg",
+      "imageURL": "https://www.sony.com/image/dd18cf93606d238305a733d336c45537?fmt=pjpeg&wid=330&bgcolor=FFFFFF&bgc=FFFFFF",
       "price": 129.99,
       "shortDescription": "Wireless headphones with noise-canceling technology.",
       "longDescription": "Immerse yourself in your favorite music with these wireless headphones. Featuring active noise-canceling technology, they block out distractions so you can enjoy crisp, clear sound wherever you go."
@@ -26,7 +26,7 @@
     {
       "id": 4,
       "productName": "Smartwatch",
-      "imageURL": "https://example.com/smartwatch.jpg",
+      "imageURL": "https://media.mykenza.tn/uploads/2023/01/Smartwatch-WK8-Ultra-Noir-Homme-et-Femme-Tunisie-prix.jpg",
       "price": 199.99,
       "shortDescription": "Stay connected and track your fitness with this smartwatch.",
       "longDescription": "Monitor your health, receive notifications, and stay connected with this stylish smartwatch. Its intuitive interface and long battery life make it the perfect companion for your active lifestyle."
@@ -34,7 +34,7 @@
     {
       "id": 5,
       "productName": "Tablet",
-      "imageURL": "https://example.com/tablet.jpg",
+      "imageURL": "https://www.tunisianet.com.tn/157302-large/tablette-samsung-galaxy-tab-a-sm-t295-4g-8-32-go-silver.jpg",
       "price": 349.99,
       "shortDescription": "Versatile tablet for work, entertainment, and creativity.",
       "longDescription": "Unleash your creativity and productivity with this versatile tablet. Whether you're watching movies, sketching artwork, or taking notes, its high-resolution display and responsive stylus make every task a breeze."
@@ -42,7 +42,7 @@
     {
       "id": 6,
       "productName": "Gaming Console",
-      "imageURL": "https://example.com/console.jpg",
+      "imageURL": "https://media.cnn.com/api/v1/images/stellar/prod/201110165914-best-gaming-consoles-series-s.jpg?q=w_1110,c_fill",
       "price": 299.99,
       "shortDescription": "Next-gen gaming console for immersive gaming experiences.",
       "longDescription": "Experience the future of gaming with this powerful console. With stunning graphics, lightning-fast load times, and a vast library of games, it delivers unparalleled immersion and excitement."
@@ -50,7 +50,7 @@
     {
       "id": 7,
       "productName": "Digital Camera",
-      "imageURL": "https://example.com/camera.jpg",
+      "imageURL": "https://m.media-amazon.com/images/I/712T6VYeaWL._AC_UF894,1000_QL80_.jpg",
       "price": 599.99,
       "shortDescription": "Capture memories in stunning detail with this digital camera.",
       "longDescription": "Preserve your most precious moments with this high-performance digital camera. Featuring advanced sensors and optics, it delivers breathtaking image quality and professional-grade results."
@@ -58,7 +58,7 @@
     {
       "id": 8,
       "productName": "Wireless Speaker",
-      "imageURL": "https://example.com/speaker.jpg",
+      "imageURL": "https://zaarastore.tn/wp-content/uploads/2022/04/SPAEKER2.png",
       "price": 79.99,
       "shortDescription": "Portable wireless speaker for crystal-clear audio anywhere.",
       "longDescription": "Take your music with you wherever you go with this portable wireless speaker. With its compact design and powerful sound, it's perfect for parties, picnics, and outdoor adventures."
@@ -66,7 +66,7 @@
     {
       "id": 9,
       "productName": "External Hard Drive",
-      "imageURL": "https://example.com/harddrive.jpg",
+      "imageURL": "https://i.ebayimg.com/images/g/B7UAAOSwAMdkHAcH/s-l1200.webp",
       "price": 129.99,
       "shortDescription": "Expand your storage and backup your important files.",
       "longDescription": "Keep your files safe and secure with this high-capacity external hard drive. Whether you're backing up photos, videos, or documents, its fast transfer speeds and durable construction ensure reliable performance."
@@ -74,7 +74,7 @@
     {
       "id": 10,
       "productName": "Wireless Mouse",
-      "imageURL": "https://example.com/mouse.jpg",
+      "imageURL": "data:image/jpeg;base64,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",
       "price": 29.99,
       "shortDescription": "Ergonomic wireless mouse for comfortable computing.",
       "longDescription": "Say goodbye to tangled wires with this ergonomic wireless mouse. Its sleek design and responsive controls make it a pleasure to use, whether you're working, gaming, or browsing the web."
