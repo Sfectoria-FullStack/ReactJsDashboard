@@ -1,29 +1,47 @@
-let products = require("../data.json")
-
+const { Product } = require("../models/models");
 
 // get all
-const selectAllProducts = (req,res)=>{
-    res.status(200).send(products)
-    }
-// post a product 
-const createProduct = (req,res)=> {
-    products.push(req.body)
-    res.status(201).send(products)
-}
+const selectAllProducts = async (req, res) => {
+  try {
+    const result = await Product.find();
+    res.status(200).send(result);
+  } catch (error) {
+    console.log(error);
+  }
+};
+// post a product
+const createProduct = async (req, res) => {
+  try {
+    const result = await Product.create(req.body);
+    res.status(201).send(result);
+  } catch (error) {
+    console.log(error);
+  }
+};
+// get one product
+const getOne = async (req, res) => {
+ try {
+    const result = await Product.findOne({
+        id : +req.params.id
+    })
+   result?res.send(result):res.status(400).send("id not found")
+ } catch (error) {
+    console.log(error);
+ }
+};
 
-// get one product 
-const getOne = (req,res)=>{ console.log(req);
-    const result=(products.find((elem)=>elem.id===+req.params.id))
-res.status(200).send(result)
-}
+// delete a product
 
-// delete a product 
+const removeProduct = async(req, res) => {
+ try {
+  const result = await Product.deleteOne({
+    id : +req.params.id
+  })
+    res.status(202).send(result);
+ } catch (error) {
+  console.log(error)
+ }
 
-const removeProduct = (req,res)=>{ 
-    const result=products.filter((elem)=>elem.id!==+req.params.id)
-    products=result
-    res.status(202).send(products)
-}
+};
 
-
-module.exports = {removeProduct,getOne,createProduct,selectAllProducts}
+module.exports = { removeProduct, getOne, createProduct, selectAllProducts };
