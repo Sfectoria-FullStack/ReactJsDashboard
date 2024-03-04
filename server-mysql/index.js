@@ -1,9 +1,11 @@
 const express = require("express");
 const app = express();
 const PORT = 4000;
+require('./models/index')
 const cors = require("cors");
-const productRouter = require("./router/products.router");
-
+const userRouter = require("./router/users.router");
+app.use(cors({origin:"*"}))
+// const productRouter = require("./router/products.router");
 
 app.use(
   cors({
@@ -11,7 +13,8 @@ app.use(
   })
 );
 
-app.use('/products',productRouter)
+// app.use('/products',productRouter)
+app.use('/users',userRouter)
 
 app.listen(PORT, () => {
   console.log("server listing to http://localhost: " + PORT);
