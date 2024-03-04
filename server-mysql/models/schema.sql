@@ -1,17 +1,11 @@
--- ---
--- Globals
--- ---
--- SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
--- SET FOREIGN_KEY_CHECKS=0;
--- ---
--- Table 'products'
--- 
--- ---
 Drop database if EXISTS pfe;
 
 CREATE database pfe;
 
 use pfe;
+
+
+
 -- ---
 -- Globals
 -- ---
@@ -24,16 +18,15 @@ use pfe;
 -- 
 -- ---
 
-
 DROP TABLE IF EXISTS `products`;
 		
 CREATE TABLE `products` (
-  `id` INTEGER NOT NULL AUTO_INCREMENT ,
+  `id` INTEGER NOT NULL AUTO_INCREMENT,
   `productName` VARCHAR(255) NOT NULL,
-  `imageURL` MEDIUMTEXT NULL,
-  `price` DECIMAL NULL,
+  `imageURL` MEDIUMTEXT NULL DEFAULT NULL,
+  `price` DECIMAL NULL DEFAULT NULL,
   `category` VARCHAR(255) NOT NULL,
-  `description` MEDIUMTEXT NULL,
+  `description` MEDIUMTEXT NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
 );
 
@@ -84,4 +77,3 @@ CREATE TABLE `reactType` (
 ALTER TABLE `react` ADD FOREIGN KEY (id_users) REFERENCES `users` (`id`);
 ALTER TABLE `react` ADD FOREIGN KEY (id_products) REFERENCES `products` (`id`);
 ALTER TABLE `react` ADD FOREIGN KEY (id_reactType) REFERENCES `reactType` (`id`);
-
