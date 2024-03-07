@@ -13,17 +13,18 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Products {
-  id          Int     @id @default(autoincrement())
-  title       String  @unique
-  description String?
-  price       Int
-  Users       Users?  @relation(fields: [usersId], references: [id])
-  usersId     Int?
+model User {
+  id       Int    @id() @default(autoincrement())
+  fullName String
+  age      Int
+  posts    Post[]
 }
 
-model Users {
-  id       Int        @id @default(autoincrement())
-  fullName String
-  products Products[]
+model Post {
+  id          Int    @id() @default(autoincrement())
+  imageURL    String
+  productName String
+  price       Int
+  User        User  @relation(fields: [userId], references: [id])
+  userId      Int
 }
