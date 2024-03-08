@@ -3,7 +3,7 @@ import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { PrismaService } from 'src/prisma/prisma.service';
 import { Interface } from 'readline';
-
+const prisma = new PrismaService()
 @Injectable()
 export class UsersService {
   constructor(private readonly prisma:PrismaService){
