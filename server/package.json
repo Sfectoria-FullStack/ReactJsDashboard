@@ -6,13 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon express.js",
-    "seed" : "node models/seed.js"
+    "seed": "node models/seed.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
     "mongoose": "^8.2.0",
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.0",
+    "swagger-jsdoc": "^5.0.1",
+    "swagger-ui-express": "^5.0.0"
   }
 }
